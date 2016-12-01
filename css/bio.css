@@ -1,0 +1,92 @@
+.container > p::first-letter {
+    font-size: 2em;
+    color: #3C1D3D;
+    font-weight: bold;
+    text-shadow: 1px 1px #000000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+    transition: box-shadow 1s ease-out, transform 1s ease;
+    transition-delay: 1s, 0s;
+}
+
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
+    transition-delay: 0s, 1s;
+}
+
+.citacao-bio:nth-of-type(even) {
+    float: left;
+    margin-left: 0;
+}
+
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.citacao-bio:nth-of-type(odd) {
+    float: right;
+    margin-right: 0;
+}
+
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.citacao-bio::before {
+    content: '"';
+    font-size: 10em;
+    color: #BBBBBB;
+    line-height: .8;
+    position: absolute;
+}
+
+.citacao-bio > p {
+    position: relative;
+}
+
+table.habilidades {
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    margin-top: 1em 0;
+}
+
+.habilidades th, .habilidades td {
+    /*border: 1px solid #000000;*/
+    padding: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.habilidades th {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.habilidades thead th {
+    background-color: #3C1D3D;
+}
+
+.habilidades tbody th {
+    background-color: #851944;
+}
+
+.habilidades td {
+    background-color: #EEE;
+    color: inherit;
+}
+
+.habilidades [colspan] {
+    font-style: italic;
+}

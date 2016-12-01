@@ -1,0 +1,79 @@
+body {
+    width: 100%;
+    padding: none;
+}
+
+.face {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    background-color: red;
+    transform: translateZ(100px);
+}
+
+.right {
+    background-color: orange;
+    transform: translateX(100px) rotateY(90deg);
+}
+
+.left {
+    background-color: yellow;
+    transform: translateX(-100px) rotateY(-90deg);
+}
+
+.up {
+    background-color: green;
+    transform: translateY(100px) rotateX(90deg);
+}
+
+.down {
+    background-color: blue;
+    transform: translateY(-100px) rotateX(-90deg);
+}
+
+.back {
+    background-color: indigo;
+    transform: translateZ(-100px) rotateX(180deg);
+}
+
+.cube {
+    margin: auto;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    transform: rotateX(10deg) rotateY(10deg);
+    transition-duration: 100s;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate3d(1, 1, 1, 360deg);
+    -moz-transform: rotate3d(1, 1, 1, 360deg);
+    -webkit-transform: rotate3d(1, 1, 1, 360deg);
+    -o-transform: rotate3d(1, 1, 1, 360deg);
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+.rotating {
+    -webkit-animation: rotating 7s linear infinite;
+    -moz-animation: rotating 7s linear infinite;
+    -ms-animation: rotating 7s linear infinite;
+    -o-animation: rotating 7s linear infinite;
+    animation: rotating 7s linear infinite;
+}
